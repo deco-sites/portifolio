@@ -11,8 +11,10 @@ import * as $3 from "./routes/index.tsx";
 import * as $$0 from "./islands/LiveControls.tsx";
 import * as $$$0 from "./sections/GetStarted.tsx";
 import * as $$$1 from "./sections/Head.tsx";
-import * as $$$2 from "./sections/Markdown.tsx";
-import * as $$$3 from "./sections/QuillText.tsx";
+import * as $$$2 from "./sections/Intro.tsx";
+import * as $$$3 from "./sections/Markdown.tsx";
+import * as $$$4 from "./sections/Menu.tsx";
+import * as $$$5 from "./sections/QuillText.tsx";
 import * as $$$$0 from "./functions/LoadGitHubRaw.ts";
 
 const manifest: DecoManifest = {
@@ -26,8 +28,10 @@ const manifest: DecoManifest = {
   sections: {
     "./sections/GetStarted.tsx": $$$0,
     "./sections/Head.tsx": $$$1,
-    "./sections/Markdown.tsx": $$$2,
-    "./sections/QuillText.tsx": $$$3,
+    "./sections/Intro.tsx": $$$2,
+    "./sections/Markdown.tsx": $$$3,
+    "./sections/Menu.tsx": $$$4,
+    "./sections/QuillText.tsx": $$$5,
   },
   functions: { "./functions/LoadGitHubRaw.ts": $$$$0 },
   schemas: {
@@ -97,6 +101,22 @@ const manifest: DecoManifest = {
       },
       "outputSchema": null,
     },
+    "./sections/Intro.tsx": {
+      "inputSchema": {
+        "title": " Intro",
+        "type": "object",
+        "properties": {
+          "descricao": {
+            "type": "string",
+            "title": "Descricao",
+          },
+        },
+        "required": [
+          "descricao",
+        ],
+      },
+      "outputSchema": null,
+    },
     "./sections/Markdown.tsx": {
       "inputSchema": {
         "title": " Markdown",
@@ -112,6 +132,15 @@ const manifest: DecoManifest = {
         "required": [
           "text",
         ],
+      },
+      "outputSchema": null,
+    },
+    "./sections/Menu.tsx": {
+      "inputSchema": {
+        "title": " Menu",
+        "type": "object",
+        "properties": {},
+        "required": [],
       },
       "outputSchema": null,
     },
