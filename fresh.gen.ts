@@ -11,7 +11,8 @@ import * as $3 from "./routes/index.tsx";
 import * as $$0 from "./islands/LiveControls.tsx";
 import * as $$$0 from "./sections/Intro.tsx";
 import * as $$$1 from "./sections/Menu.tsx";
-import * as $$$2 from "./sections/Work.tsx";
+import * as $$$2 from "./sections/Projects.tsx";
+import * as $$$3 from "./sections/Work.tsx";
 import * as $$$$0 from "./functions/LoadGitHubRaw.ts";
 
 const manifest: DecoManifest = {
@@ -25,7 +26,8 @@ const manifest: DecoManifest = {
   sections: {
     "./sections/Intro.tsx": $$$0,
     "./sections/Menu.tsx": $$$1,
-    "./sections/Work.tsx": $$$2,
+    "./sections/Projects.tsx": $$$2,
+    "./sections/Work.tsx": $$$3,
   },
   functions: { "./functions/LoadGitHubRaw.ts": $$$$0 },
   schemas: {
@@ -89,6 +91,45 @@ const manifest: DecoManifest = {
         },
         "required": [
           "dummy",
+        ],
+      },
+      "outputSchema": null,
+    },
+    "./sections/Projects.tsx": {
+      "inputSchema": {
+        "title": " Projects",
+        "type": "object",
+        "properties": {
+          "projects": {
+            "type": "array",
+            "items": {
+              "title": "Project",
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "title": "Title",
+                },
+                "url": {
+                  "type": "string",
+                  "title": "Url",
+                },
+                "description": {
+                  "type": "string",
+                  "title": "Description",
+                },
+              },
+              "required": [
+                "title",
+                "url",
+                "description",
+              ],
+            },
+            "title": "Projects",
+          },
+        },
+        "required": [
+          "projects",
         ],
       },
       "outputSchema": null,
