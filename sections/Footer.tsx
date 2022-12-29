@@ -8,7 +8,7 @@ export default function FooterComponent(props: Props) {
       id="footer"
       class="w-full bg-gray-900 grid grid-cols-1 md:grid-cols-2"
     >
-      <div class="mt-4 ml-2 mb-10">
+      <div class="mt-4 mb-10">
         <p class="text-white text-xs mt-4 font-mono ">Icons from flaticon</p>
         <ul>
           <li>
