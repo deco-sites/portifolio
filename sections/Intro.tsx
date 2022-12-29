@@ -9,31 +9,23 @@ export default function IntroComponent(props: Props) {
   return (
     <section
       id="intro"
-      class="mt-20 w-full bg-blue-900 flex flex-col md:flex-row justify-around pb-10"
-    >
-      <div
-        id="pic-area"
-        class=" flex flex-row justify-center ml-2"
-      >
-        <div class="flex flex-col-reverse md:flex-col justify-center">
-          <img
-            src={props.profile}
-            class="w-52 h-52 mr-auto ml-auto rounded-full border-white border-4"
-          />
-          <div>
-            <h2 class="text-3xl mt-4 text-white font-bold">{props.nome}</h2>
-            <h3 class="mb-4 text-white ">{props.status}</h3>
-          </div>
-        </div>
+      class="grid grid-cols-1 md:grid-cols-2 justify-items-center bg-blue-900 mt-20 pb-10"
+    >        
+    <div class="flex flex-col-reverse md:flex-col justify-center">
+      <img src={props.profile} class="w-52 h-52 mr-auto ml-auto rounded-full border-white border-4"/>
+      <div>
+        <h2 class="text-3xl mt-4 text-white font-bold">{props.nome}</h2>
+        <h3 class="mb-4 text-white ">{props.status}</h3>
       </div>
-      <div id="text-area" class="mr-auto ml-auto w-4/5 md:w-2/3">
+    </div>
+      <div id="text-area" class="w-3/4">
         <div class="flex flex-row justify-center">
           <h1 class="inline font-bold text-3xl mt-8 text-white">
             Apresentação
           </h1>
         </div>
         <div class="flex flex-row justify-center">
-          <p class="inline mt-4 w-full text-white md:text-xl text-justify  font-mono ">
+          <p class="inline mt-4 text-white md:text-xl text-justify  font-mono ">
             {props.descricao}
           </p>
         </div>
@@ -43,11 +35,11 @@ export default function IntroComponent(props: Props) {
           </h2>
         </div>
         <hr></hr>
-        <div class="flex flex-row justify-around mt-4">
-          <span class="text-white text-sm font-bold">C++</span>
-          <span class="text-white text-sm font-bold">C</span>
-          <span class="text-white text-sm font-bold">Python</span>
-          <span class="text-white text-sm font-bold">Embarcados</span>
+        <div class="grid grid-cols-2 justify-items-center mt-4 ">
+          <span class="text-white text-sm font-bold mb-4">C++</span>
+          <span class="text-white text-sm font-bold mb-4">C</span>
+          <span class="text-white text-sm font-bold mb-4">Python</span>
+          <span class="text-white text-sm font-bold mb-4">Embarcados</span>
         </div>
         <div>
           <div class="flex flex-row justify-start">
