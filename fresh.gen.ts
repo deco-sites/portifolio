@@ -11,6 +11,7 @@ import * as $3 from "./routes/index.tsx";
 import * as $$0 from "./islands/LiveControls.tsx";
 import * as $$$0 from "./sections/Intro.tsx";
 import * as $$$1 from "./sections/Menu.tsx";
+import * as $$$2 from "./sections/Work.tsx";
 import * as $$$$0 from "./functions/LoadGitHubRaw.ts";
 
 const manifest: DecoManifest = {
@@ -21,7 +22,11 @@ const manifest: DecoManifest = {
     "./routes/index.tsx": $3,
   },
   islands: { "./islands/LiveControls.tsx": $$0 },
-  sections: { "./sections/Intro.tsx": $$$0, "./sections/Menu.tsx": $$$1 },
+  sections: {
+    "./sections/Intro.tsx": $$$0,
+    "./sections/Menu.tsx": $$$1,
+    "./sections/Work.tsx": $$$2,
+  },
   functions: { "./functions/LoadGitHubRaw.ts": $$$$0 },
   schemas: {
     "./sections/Intro.tsx": {
@@ -68,6 +73,22 @@ const manifest: DecoManifest = {
         },
         "required": [
           "dummy",
+        ],
+      },
+      "outputSchema": null,
+    },
+    "./sections/Work.tsx": {
+      "inputSchema": {
+        "title": " Work",
+        "type": "object",
+        "properties": {
+          "Dummy": {
+            "type": "string",
+            "title": " Dummy",
+          },
+        },
+        "required": [
+          "Dummy",
         ],
       },
       "outputSchema": null,

@@ -7,15 +7,15 @@ export interface Props {
 }
 export default function IntroComponent(props: Props) {
   return (
-    <div
+    <section
       id="intro"
       class="mt-20 w-full bg-blue-900 flex flex-col md:flex-row justify-around pb-10"
     >
       <div
         id="pic-area"
-        class=" flex flex-row mt-5 md:flex-col justify-center ml-2"
+        class=" flex flex-row justify-center ml-2"
       >
-        <div class="flex flex-col-reverse md:flex-col">
+        <div class="flex flex-col-reverse md:flex-col justify-center">
           <img
             src={props.profile}
             class="w-52 h-52 mr-auto ml-auto rounded-full border-white border-4"
@@ -62,6 +62,6 @@ export default function IntroComponent(props: Props) {
           <span class="text-white text-sm font-bold">Java/Kotlin</span>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
