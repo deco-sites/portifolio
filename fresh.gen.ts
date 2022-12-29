@@ -51,12 +51,28 @@ const manifest: DecoManifest = {
             "type": "string",
             "title": "Profile",
           },
+          "MainSkills": {
+            "type": "array",
+            "items": {
+              "type": "string",
+            },
+            "title": " Main Skills",
+          },
+          "OthersSkills": {
+            "type": "array",
+            "items": {
+              "type": "string",
+            },
+            "title": " Others Skills",
+          },
         },
         "required": [
           "descricao",
           "status",
           "nome",
           "profile",
+          "MainSkills",
+          "OthersSkills",
         ],
       },
       "outputSchema": null,
@@ -82,13 +98,57 @@ const manifest: DecoManifest = {
         "title": " Work",
         "type": "object",
         "properties": {
-          "Dummy": {
-            "type": "string",
-            "title": " Dummy",
+          "Works": {
+            "type": "array",
+            "items": {
+              "title": "Work",
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "title": "Title",
+                },
+                "itens": {
+                  "type": "array",
+                  "items": {
+                    "title": "WorkItem",
+                    "type": "object",
+                    "properties": {
+                      "title": {
+                        "type": "string",
+                        "title": "Title",
+                      },
+                      "subtitle": {
+                        "type": "string",
+                        "title": "Subtitle",
+                      },
+                      "itens": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                        },
+                        "title": "Itens",
+                      },
+                    },
+                    "required": [
+                      "title",
+                      "subtitle",
+                      "itens",
+                    ],
+                  },
+                  "title": "Itens",
+                },
+              },
+              "required": [
+                "title",
+                "itens",
+              ],
+            },
+            "title": " Works",
           },
         },
         "required": [
-          "Dummy",
+          "Works",
         ],
       },
       "outputSchema": null,
