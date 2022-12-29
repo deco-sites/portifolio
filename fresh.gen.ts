@@ -9,10 +9,12 @@ import * as $1 from "./routes/_app.tsx";
 import * as $2 from "./routes/_middleware.ts";
 import * as $3 from "./routes/index.tsx";
 import * as $$0 from "./islands/LiveControls.tsx";
-import * as $$$0 from "./sections/Intro.tsx";
-import * as $$$1 from "./sections/Menu.tsx";
-import * as $$$2 from "./sections/Projects.tsx";
-import * as $$$3 from "./sections/Work.tsx";
+import * as $$$0 from "./sections/Contact.tsx";
+import * as $$$1 from "./sections/Footer.tsx";
+import * as $$$2 from "./sections/Intro.tsx";
+import * as $$$3 from "./sections/Menu.tsx";
+import * as $$$4 from "./sections/Projects.tsx";
+import * as $$$5 from "./sections/Work.tsx";
 import * as $$$$0 from "./functions/LoadGitHubRaw.ts";
 
 const manifest: DecoManifest = {
@@ -24,13 +26,76 @@ const manifest: DecoManifest = {
   },
   islands: { "./islands/LiveControls.tsx": $$0 },
   sections: {
-    "./sections/Intro.tsx": $$$0,
-    "./sections/Menu.tsx": $$$1,
-    "./sections/Projects.tsx": $$$2,
-    "./sections/Work.tsx": $$$3,
+    "./sections/Contact.tsx": $$$0,
+    "./sections/Footer.tsx": $$$1,
+    "./sections/Intro.tsx": $$$2,
+    "./sections/Menu.tsx": $$$3,
+    "./sections/Projects.tsx": $$$4,
+    "./sections/Work.tsx": $$$5,
   },
   functions: { "./functions/LoadGitHubRaw.ts": $$$$0 },
   schemas: {
+    "./sections/Contact.tsx": {
+      "inputSchema": {
+        "title": " Contact",
+        "type": "object",
+        "properties": {
+          "contacts": {
+            "type": "array",
+            "items": {
+              "title": "Contact",
+              "type": "object",
+              "properties": {
+                "icon": {
+                  "format": "image-uri",
+                  "type": "string",
+                  "title": "Icon",
+                },
+                "title": {
+                  "type": "string",
+                  "title": "Title",
+                },
+                "link": {
+                  "type": "string",
+                  "title": "Link",
+                },
+                "subtitle": {
+                  "type": "string",
+                  "title": "Subtitle",
+                },
+              },
+              "required": [
+                "icon",
+                "title",
+                "link",
+                "subtitle",
+              ],
+            },
+            "title": "Contacts",
+          },
+        },
+        "required": [
+          "contacts",
+        ],
+      },
+      "outputSchema": null,
+    },
+    "./sections/Footer.tsx": {
+      "inputSchema": {
+        "title": " Footer",
+        "type": "object",
+        "properties": {
+          "tmp": {
+            "type": "string",
+            "title": "Tmp",
+          },
+        },
+        "required": [
+          "tmp",
+        ],
+      },
+      "outputSchema": null,
+    },
     "./sections/Intro.tsx": {
       "inputSchema": {
         "title": " Intro",
