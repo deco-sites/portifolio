@@ -9,12 +9,8 @@ import * as $1 from "./routes/_app.tsx";
 import * as $2 from "./routes/_middleware.ts";
 import * as $3 from "./routes/index.tsx";
 import * as $$0 from "./islands/LiveControls.tsx";
-import * as $$$0 from "./sections/GetStarted.tsx";
-import * as $$$1 from "./sections/Head.tsx";
-import * as $$$2 from "./sections/Intro.tsx";
-import * as $$$3 from "./sections/Markdown.tsx";
-import * as $$$4 from "./sections/Menu.tsx";
-import * as $$$5 from "./sections/QuillText.tsx";
+import * as $$$0 from "./sections/Intro.tsx";
+import * as $$$1 from "./sections/Menu.tsx";
 import * as $$$$0 from "./functions/LoadGitHubRaw.ts";
 
 const manifest: DecoManifest = {
@@ -25,82 +21,9 @@ const manifest: DecoManifest = {
     "./routes/index.tsx": $3,
   },
   islands: { "./islands/LiveControls.tsx": $$0 },
-  sections: {
-    "./sections/GetStarted.tsx": $$$0,
-    "./sections/Head.tsx": $$$1,
-    "./sections/Intro.tsx": $$$2,
-    "./sections/Markdown.tsx": $$$3,
-    "./sections/Menu.tsx": $$$4,
-    "./sections/QuillText.tsx": $$$5,
-  },
+  sections: { "./sections/Intro.tsx": $$$0, "./sections/Menu.tsx": $$$1 },
   functions: { "./functions/LoadGitHubRaw.ts": $$$$0 },
   schemas: {
-    "./sections/GetStarted.tsx": {
-      "inputSchema": {
-        "title": " Get Started",
-        "type": "object",
-        "properties": {
-          "enableInspectVSCode": {
-            "type": [
-              "boolean",
-              "null",
-            ],
-            "title": "Enable Inspect V S Code",
-          },
-        },
-        "required": [],
-      },
-      "outputSchema": null,
-    },
-    "./sections/Head.tsx": {
-      "inputSchema": {
-        "title": " Head",
-        "type": "object",
-        "properties": {
-          "title": {
-            "type": "string",
-            "title": "Title",
-          },
-          "description": {
-            "type": "string",
-            "title": "Description",
-          },
-          "url": {
-            "type": "string",
-            "title": "Url",
-          },
-          "imageUrl": {
-            "type": "string",
-            "title": "Image Url",
-          },
-          "faviconUrl": {
-            "type": "string",
-            "title": "Favicon Url",
-          },
-          "styleUrls": {
-            "type": "array",
-            "items": {
-              "type": "string",
-            },
-            "title": "Style Urls",
-          },
-          "themeColor": {
-            "type": "string",
-            "title": "Theme Color",
-          },
-        },
-        "required": [
-          "title",
-          "description",
-          "url",
-          "imageUrl",
-          "faviconUrl",
-          "styleUrls",
-          "themeColor",
-        ],
-      },
-      "outputSchema": null,
-    },
     "./sections/Intro.tsx": {
       "inputSchema": {
         "title": " Intro",
@@ -110,27 +33,25 @@ const manifest: DecoManifest = {
             "type": "string",
             "title": "Descricao",
           },
-        },
-        "required": [
-          "descricao",
-        ],
-      },
-      "outputSchema": null,
-    },
-    "./sections/Markdown.tsx": {
-      "inputSchema": {
-        "title": " Markdown",
-        "type": "object",
-        "properties": {
-          "text": {
-            "$id": "5b1cd5713a375e18bb93e9635b8a2dc5fc2672cf",
-            "format": "live-function",
+          "status": {
             "type": "string",
-            "title": "Text",
+            "title": "Status",
+          },
+          "nome": {
+            "type": "string",
+            "title": "Nome",
+          },
+          "profile": {
+            "format": "image-uri",
+            "type": "string",
+            "title": "Profile",
           },
         },
         "required": [
-          "text",
+          "descricao",
+          "status",
+          "nome",
+          "profile",
         ],
       },
       "outputSchema": null,
@@ -139,24 +60,14 @@ const manifest: DecoManifest = {
       "inputSchema": {
         "title": " Menu",
         "type": "object",
-        "properties": {},
-        "required": [],
-      },
-      "outputSchema": null,
-    },
-    "./sections/QuillText.tsx": {
-      "inputSchema": {
-        "title": " Quill Text",
-        "type": "object",
         "properties": {
-          "html": {
-            "format": "html",
+          "dummy": {
             "type": "string",
-            "title": "Html",
+            "title": "Dummy",
           },
         },
         "required": [
-          "html",
+          "dummy",
         ],
       },
       "outputSchema": null,
