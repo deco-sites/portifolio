@@ -18,18 +18,21 @@ export default function ProjectsComponent(props: Props) {
           </h1>
         </div>
         {props.projects.map((item, index) => (
-          <div
-            class={index % 2
-              ? "md:col-start-1 flex flex-row md:justify-end mt-4"
-              : "md:col-start-2 flex flex-row md:justify-start mt-4"}
-          >
-            <div>
-              <h1 class="text-white text-lg font-extrabold mt-8">
-                <a href={item.url}>{item.title}</a>
-              </h1>
-              <p class="text-sm text-white text-justify">{item.description}</p>
+          <>
+            <div
+              class={index % 2 == 0
+                ? "md:col-start-2 flex flex-row justify-center mt-4"
+                : "md:col-start-1 flex flex-row justify-center mt-4"}
+            >
+              <div >
+                <h1 class="text-white w-full text-lg text-center font-extrabold mt-8 ">
+                  <a href={item.url}>{item.title}</a>
+                </h1>
+                <p class="text-sm text-white text-justify">{item.description}</p>
+              </div>
             </div>
-          </div>
+            <div></div>
+          </>
         ))}
       </div>
     </section>
