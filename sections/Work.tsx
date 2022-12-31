@@ -25,7 +25,7 @@ export default function WorkComponent(props: Props) {
       </div>
       {props.Works.map((item, i) => (
         <>
-          <div class="mt-8 md:mt-16">
+          <div class="mt-8">
             <h2 class="text-white text-xl text-2xl font-extrabold">
               {item.title}
             </h2>
@@ -33,19 +33,20 @@ export default function WorkComponent(props: Props) {
           <div class="w-3/4 ">
             {item.itens.map((item, j) => {
               return (
-                <div class="mt-8 md:mt-16">
+                <div class="mt-8" >
                   <h2 class="text-white text-xl md:text-2xl font-extrabold ">
                     {item.title}
                   </h2>
-
                   <h3 class="text-white text-xs md:text-sm">{item.subtitle}</h3>
-                  <ul class="list-disc mt-4" id={`work-${i}-${j}`}>
-                    {item.itens.map((item) => (
-                      <li class="text-white mt-4 text-xs md:text-base">
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
+                  <details class="text-white group">
+                    <ul class="mt-4 list-disc font-mono" id={`work-${i}-${j}`}>
+                      {item.itens.map((item) => (
+                        <li class="text-white mt-4 text-sm">
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </details>
                 </div>
               );
             })}

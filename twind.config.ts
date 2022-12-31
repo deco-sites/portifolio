@@ -1,3 +1,7 @@
+import { getStyleTag, virtualSheet } from "https://esm.sh/twind@0.16.16/sheets";
+
+const sheet = virtualSheet();
+
 /** @type {import('$fresh/plugins/twind').Options} */
 export default {
   theme: {
@@ -21,4 +25,5 @@ export default {
       },
     },
   },
+  sheet
 };
