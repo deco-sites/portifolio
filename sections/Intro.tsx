@@ -63,7 +63,7 @@ export default function IntroComponent(props: Props) {
         </div>
         <div class="mt-8 flex flex-row justify-center">
           <span class="border-2 text-2xl font-mono font-bold text-white border-white rounded-xl p-4">
-            <a href={props.CV}>Currículo &#128462;</a>
+            <a href={props.CV}>Currículo</a>
           </span>
         </div>
       </div>
