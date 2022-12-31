@@ -47,7 +47,12 @@ export default function FooterComponent(props: Props) {
             </a>
           </li>
           <li class="text-white text-[10px] font-mono ">
-            <a href="https://www.flaticon.com/br/icones-gratis/cv" title="cv ícones">Cv ícones criados por Freepik - Flaticon</a>
+            <a
+              href="https://www.flaticon.com/br/icones-gratis/cv"
+              title="cv ícones"
+            >
+              Cv ícones criados por Freepik - Flaticon
+            </a>
           </li>
         </ul>
       </div>

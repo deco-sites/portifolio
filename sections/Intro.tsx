@@ -7,7 +7,7 @@ export interface Props {
   profile: LiveImage;
   MainSkills: string[];
   OthersSkills: string[];
-  CV:string;
+  CV: string;
 }
 export default function IntroComponent(props: Props) {
   return (
@@ -61,7 +61,7 @@ export default function IntroComponent(props: Props) {
             <span class="text-white text-sm font-bold mb-4">{item}</span>
           ))}
         </div>
-        <div class="mt-16 flex flex-row justify-center">
+        <div class="mt-8 flex flex-row justify-center">
           <span class="border-2 text-2xl font-mono font-bold text-white border-white rounded-xl p-4">
             <a href={props.CV}>Currículo &#128462;</a>
           </span>
