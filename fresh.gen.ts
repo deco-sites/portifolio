@@ -132,6 +132,10 @@ const manifest: DecoManifest = {
             },
             "title": " Others Skills",
           },
+          "CV": {
+            "type": "string",
+            "title": " C V",
+          },
         },
         "required": [
           "descricao",
@@ -140,6 +144,7 @@ const manifest: DecoManifest = {
           "profile",
           "MainSkills",
           "OthersSkills",
+          "CV",
         ],
       },
       "outputSchema": null,
